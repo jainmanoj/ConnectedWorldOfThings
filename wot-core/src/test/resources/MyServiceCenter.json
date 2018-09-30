@@ -1,0 +1,38 @@
+{
+	"endpoints": [
+		{
+			"bindingScheme": "http",
+			"hostname": "localhost",
+			"port": 8080,
+			"rootPath": ""
+		}
+	],
+	"thing": {
+		"model": null,
+		"name": "ServiceCenterFord",
+		"classType": "ServiceCenter",
+		"isLiving": false,
+		"heartbeat": -1,
+		"namespace": "ServiceCenterWorld",
+		"properties": [
+		],
+		"events": [
+		],
+		"actions": [
+			{
+				"actionOnThing": null,
+				"actionName": "ScheduleService",
+				"inputParams": {
+					"type": "integer",
+					"value": "100",
+					"valueObj": 100.0
+				},
+				"outputParams": null
+			}
+		],
+		"metadatas": [
+		],
+		"forwardRelationships": {
+		}
+	}
+}

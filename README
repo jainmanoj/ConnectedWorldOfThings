@@ -1,0 +1,84 @@
+
+set path=%path%;C:\Manoj\apache-maven-3.5.0\bin
+
+
+Getting started
+
+Prerequisite:
+
+Install Java 8
+
+
+Run & Build
+
+using maven
+mvn spring-boot:run
+
+Cyrrently Spring boot is configured to run in debug mode at port 8888
+
+You have to launch the application from eclipse in debug mode.
+Create a debug configuartion Remote Application listening at port 8888
+
+
+I am using firefox plugins HTTPRequester
+
+Get http://localhost:8080/greetings --- this is to test reactive rest api
+
+Get http://localhost:8080/api/testWot/  --- this is to test Launcher API for WoT platfom
+
+
+Two API  
+
+Post http://localhost:8080/api/deployThinglet  - Post the Thinglet depination, GUID of thinglet is return
+
+You can copy the contents from two resouce file MyCar.json or MyServiceCenter.json. 
+Post the content and Content-type is application/json
+ 
+Get http://localhost:8080/api/getThingletDescription/{guid}  - Get thing descriptor provide the guid of Thinglet deployed
+
+
+
+
+using gradle
+./gradlew bootRun 
+
+open http://localhost:8080/greetings in your browser and use the various test pages.
+
+
+Other Post URI with Payload as shown below. The response will be as shown below
+
+http://localhost:8080/handleMessageFuture
+http://localhost:8080//handleMessageReactor
+http://localhost:8080//handleMessageReactorFlux
+http://localhost:8080/handleMessageRxJava
+http://localhost:8080/handleMessageRxJavaObs
+
+
+
+Expected Protocol
+The structure of the request and response message handled by each of the three services is along these lines, all of them will take in a request which looks like this:
+
+{
+    "id":1,
+    "delay_by": 2000,
+    "payload": "Hello",
+    "throw_exception": false
+}
+The delay_by will make the response delayed and throw_exception will make the response error out. A sane response would be the following:
+
+{
+    "id": "1",
+    "received": "Hello",
+    "payload": "Response Message"
+}
+I will be ignoring the exceptions for this post.
+
+
+http://localhost:8080/
+
+
+======
+
+Install Kafka 
+https://devops.profitbricks.com/tutorials/install-and-configure-apache-kafka-on-ubuntu-1604-1/
+

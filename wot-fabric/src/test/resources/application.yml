@@ -1,0 +1,10 @@
+server:
+  port: 8080
+
+kafka:
+  producer:
+    bootstrap: 192.168.56.101:9092
+    topic: workunits
+  consumer:
+    bootstrap: 192.168.56.101:9092
+    topic: workunits    

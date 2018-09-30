@@ -1,0 +1,34 @@
+1. Propogation logic should be just based on 1 hop - We should not propogate till end of tree. 
+It is duplicate propogation as now we have Subscription logic to upstream listers
+
+2. Behavior function -
+ThingBehavior car1StearingWobbling = new ThingBehavior("StearingWobbling", Arrays.asList("LowTyrePressure","LowTyrePressure"), "LOGICALANDEVENTS","CALLSERVICECENTER");
+car1.addBehavior(car1StearingWobbling);
+We should able to define smart behavior functions
+It should be nestable.
+It should able to support Math / Logical  expression
+It should able to work with objects <GENERICS)
+Use JAVA 8 Functions / BiFunctions
+Make it as abstract as Possible
+Define interface of Data type.
+Once Functions are define we should develope a high level language to develop it in simple language which shoud able to parsed into correspoding functions
+
++ , -, *, / mod %
+> >= < <=  ==  <>
+
+not and or
+
+AggegateByFunction ( MIN / MAX / AVE / SUM ) - Mostly for Events
+
+
+
+SUMMARIZED
+
+
+ 
+
+compare(expr, ">", Op.GT), compare(expr, ">=", Op.GE),
+        compare(expr, "<", Op.LT), compare(expr, "<=", Op.LE),
+        compare(expr, "=", Op.EQ), compare(expr, "<>", Op.NE),
+		
+  

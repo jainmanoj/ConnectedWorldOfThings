@@ -1,0 +1,429 @@
+{
+	"thinglet": {
+		"endpoints": [
+			{
+				"bindingScheme": "http",
+				"hostname": "localhost",
+				"port": 8080,
+				"rootPath": ""
+			}
+		],
+		"thing": {
+			"model": null,
+			"name": "ManojCar",
+			"classType": "Car",
+			"isLiving": true,
+			"heartbeat": 1000,
+			"namespace": "ManojWorld",
+			"properties": [
+				{
+					"propertyName": "Power",
+					"valueType": {
+						"type": "integer",
+						"value": "1400",
+						"valueObj": 1400.0
+					},
+					"propertyClassType": "base"
+				},
+				{
+					"propertyName": "Color",
+					"valueType": {
+						"type": "String",
+						"value": "Platinum",
+						"valueObj": "Platinum"
+					},
+					"propertyClassType": "base"
+				}
+			],
+			"events": [
+				{
+					"eventName": "StrearingUnstable",
+					"valueType": {
+						"type": "String",
+						"value": "Unstable",
+						"valueObj": "Unstable"
+					},
+					"isPropogated": false,
+					"sourceClassType": null,
+					"sourceObjectChannel": null
+				},
+				{
+					"eventName": "NeedService",
+					"valueType": {
+						"type": "boolean",
+						"value": "true",
+						"valueObj": true
+					},
+					"isPropogated": false,
+					"sourceClassType": null,
+					"sourceObjectChannel": null
+				},
+				{
+					"eventName": "LowTyrePressure",
+					"valueType": {
+						"type": "integer",
+						"value": "1825",
+						"valueObj": 1825.0
+					},
+					"isPropogated": true,
+					"sourceClassType": "Wheel",
+					"sourceObjectChannel": "ComposedOf"
+				}
+			],
+			"actions": [
+				{
+					"actionOnThing": null,
+					"actionName": "Accelerate",
+					"inputParams": {
+						"type": "integer",
+						"value": "100",
+						"valueObj": 100.0
+					},
+					"outputParams": {
+						"type": "boolean",
+						"value": "false",
+						"valueObj": false
+					}
+				},
+				{
+					"actionOnThing": null,
+					"actionName": "MoveTo",
+					"inputParams": {
+						"type": "double",
+						"value": "19328.0",
+						"valueObj": 19328.0
+					},
+					"outputParams": {
+						"type": "boolean",
+						"value": "false",
+						"valueObj": false
+					}
+				},
+				{
+					"actionOnThing": null,
+					"actionName": "SearchServiceCenter",
+					"inputParams": {
+						"type": "float",
+						"value": "19.3",
+						"valueObj": 19.3
+					},
+					"outputParams": {
+						"type": "boolean",
+						"value": "false",
+						"valueObj": false
+					}
+				},
+				{
+					"actionOnThing": null,
+					"actionName": "RegisterServiceCenter",
+					"inputParams": {
+						"type": "String",
+						"value": "",
+						"valueObj": ""
+					},
+					"outputParams": {
+						"type": "boolean",
+						"value": "false",
+						"valueObj": false
+					}
+				},
+				{
+					"actionOnThing": null,
+					"actionName": "NeedService",
+					"inputParams": {
+						"type": "String",
+						"value": "",
+						"valueObj": ""
+					},
+					"outputParams": {
+						"type": "boolean",
+						"value": "false",
+						"valueObj": false
+					}
+				}
+			],
+			"metadatas": [
+				{
+					"metadataName": "Owner",
+					"valueType": {
+						"type": "String",
+						"value": "Manoj",
+						"valueObj": "Manoj"
+					}
+				},
+				{
+					"metadataName": "Location",
+					"valueType": {
+						"type": "String",
+						"value": "Banglore",
+						"valueObj": "Banglore"
+					}
+				}
+			],
+			"forwardRelationships": {
+				"ComposedOf": [
+					{
+						"model": null,
+						"name": "Car1Wheel1",
+						"classType": "Wheel",
+						"isLiving": false,
+						"heartbeat": -1,
+						"namespace": "ManojWorld",
+						"properties": [
+						],
+						"events": [
+							{
+								"eventName": "LowTyrePressure",
+								"valueType": {
+									"type": "integer",
+									"value": "7301",
+									"valueObj": 7301.0
+								},
+								"isPropogated": true,
+								"sourceClassType": "WheelSensor",
+								"sourceObjectChannel": "InstrumentedBy"
+							}
+						],
+						"actions": [
+						],
+						"metadatas": [
+						],
+						"forwardRelationships": {
+							"InstrumentedBy": [
+								{
+									"model": null,
+									"name": "Car1Wheel1Sensor",
+									"classType": "WheelSensor",
+									"isLiving": false,
+									"heartbeat": -1,
+									"namespace": "ManojWorld",
+									"properties": [
+									],
+									"events": [
+										{
+											"eventName": "LowTyrePressure",
+											"valueType": {
+												"type": "integer",
+												"value": "7301",
+												"valueObj": 7301.0
+											},
+											"isPropogated": false,
+											"sourceClassType": null,
+											"sourceObjectChannel": null
+										}
+									],
+									"actions": [
+									],
+									"metadatas": [
+									],
+									"forwardRelationships": {
+									}
+								}
+							]
+						}
+					},
+					{
+						"model": null,
+						"name": "Car1Wheel2",
+						"classType": "Wheel",
+						"isLiving": false,
+						"heartbeat": -1,
+						"namespace": "ManojWorld",
+						"properties": [
+						],
+						"events": [
+							{
+								"eventName": "LowTyrePressure",
+								"valueType": {
+									"type": "integer",
+									"value": "7302",
+									"valueObj": 7302.0
+								},
+								"isPropogated": true,
+								"sourceClassType": "WheelSensor",
+								"sourceObjectChannel": "InstrumentedBy"
+							}
+						],
+						"actions": [
+						],
+						"metadatas": [
+						],
+						"forwardRelationships": {
+							"InstrumentedBy": [
+								{
+									"model": null,
+									"name": "Car1Wheel2Sensor",
+									"classType": "WheelSensor",
+									"isLiving": false,
+									"heartbeat": -1,
+									"namespace": "ManojWorld",
+									"properties": [
+									],
+									"events": [
+										{
+											"eventName": "LowTyrePressure",
+											"valueType": {
+												"type": "integer",
+												"value": "7302",
+												"valueObj": 7302.0
+											},
+											"isPropogated": false,
+											"sourceClassType": null,
+											"sourceObjectChannel": null
+										}
+									],
+									"actions": [
+									],
+									"metadatas": [
+									],
+									"forwardRelationships": {
+									}
+								}
+							]
+						}
+					},
+					{
+						"model": null,
+						"name": "Car1Wheel3",
+						"classType": "Wheel",
+						"isLiving": false,
+						"heartbeat": -1,
+						"namespace": "ManojWorld",
+						"properties": [
+						],
+						"events": [
+							{
+								"eventName": "LowTyrePressure",
+								"valueType": {
+									"type": "integer",
+									"value": "7303",
+									"valueObj": 7303.0
+								},
+								"isPropogated": true,
+								"sourceClassType": "WheelSensor",
+								"sourceObjectChannel": "InstrumentedBy"
+							}
+						],
+						"actions": [
+						],
+						"metadatas": [
+						],
+						"forwardRelationships": {
+							"InstrumentedBy": [
+								{
+									"model": null,
+									"name": "Car1Wheel3Sensor",
+									"classType": "WheelSensor",
+									"isLiving": false,
+									"heartbeat": -1,
+									"namespace": "ManojWorld",
+									"properties": [
+									],
+									"events": [
+										{
+											"eventName": "LowTyrePressure",
+											"valueType": {
+												"type": "integer",
+												"value": "7303",
+												"valueObj": 7303.0
+											},
+											"isPropogated": false,
+											"sourceClassType": null,
+											"sourceObjectChannel": null
+										}
+									],
+									"actions": [
+									],
+									"metadatas": [
+									],
+									"forwardRelationships": {
+									}
+								}
+							]
+						}
+					},
+					{
+						"model": null,
+						"name": "Car1Wheel4",
+						"classType": "Wheel",
+						"isLiving": false,
+						"heartbeat": -1,
+						"namespace": "ManojWorld",
+						"properties": [
+						],
+						"events": [
+							{
+								"eventName": "LowTyrePressure",
+								"valueType": {
+									"type": "integer",
+									"value": "7304",
+									"valueObj": 7304.0
+								},
+								"isPropogated": true,
+								"sourceClassType": "WheelSensor",
+								"sourceObjectChannel": "InstrumentedBy"
+							}
+						],
+						"actions": [
+						],
+						"metadatas": [
+						],
+						"forwardRelationships": {
+							"InstrumentedBy": [
+								{
+									"model": null,
+									"name": "Car1Wheel4Sensor",
+									"classType": "WheelSensor",
+									"isLiving": false,
+									"heartbeat": -1,
+									"namespace": "ManojWorld",
+									"properties": [
+									],
+									"events": [
+										{
+											"eventName": "LowTyrePressure",
+											"valueType": {
+												"type": "integer",
+												"value": "7304",
+												"valueObj": 7304.0
+											},
+											"isPropogated": false,
+											"sourceClassType": null,
+											"sourceObjectChannel": null
+										}
+									],
+									"actions": [
+									],
+									"metadatas": [
+									],
+									"forwardRelationships": {
+									}
+								}
+							]
+						}
+					}
+				],
+				"InstrumentedBy": [
+					{
+						"model": null,
+						"name": "VehicleSensor1",
+						"classType": "VehicleSensor",
+						"isLiving": false,
+						"heartbeat": -1,
+						"namespace": "ManojWorld",
+						"properties": [
+						],
+						"events": [
+						],
+						"actions": [
+						],
+						"metadatas": [
+						],
+						"forwardRelationships": {
+						}
+					}
+				]
+			}
+		}
+	}
+}
